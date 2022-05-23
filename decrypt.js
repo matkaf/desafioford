@@ -1,18 +1,20 @@
-const input = 'cfdeaarddgci^txyb';
-const { firstStep, secondStep, thirdStep } = require('./encrypt');
+const { transformWithLength, reverseCrypt, transform } = require('./utils');
 
-function decrypt(key, firstStep, secondStep, thirdStep) {
+const input = 'cfdeaarddgci^txyb';
+
+
+function decrypt(key) {
   const chars = input.split('');
 
-  const first = thirdStep(chars);
+  const first = transform(chars);
   
-  const second = secondStep(first);
+  const second = reverseCrypt(first);
 
-  const third = firstStep(second, false);
+  const third = transformWithLength(second, false);
 
   const decrypted = third.join('');
   
   return decrypted;
 }
 
-console.log(decrypt(input, firstStep, secondStep, thirdStep));
+console.log(decrypt(input));
