@@ -1,0 +1,5 @@
+# Desafio Ford
+
+## Solução a ser implementada:
+A maior prioridade na coleta de dados dos veículos é garantir a confidencialidade e integridade dos dados dos nossos clientes, portanto precisamos ter os dados criptografados. Existe um método de criptografia chamado “ZENIT POLAR”, ele é um sistema simples que consiste na substituição de algumas
+letras. Este método substitui a letra Z por P e vice-versa, a letra E por O e vice-versa, e assim por diante. Portanto, a frase “Ford Motor Company” torna-se “Fetd Meret Cemzily” usando este método. Porém o ZENIT POLAR é um método muito simples e não oferece a segurança que precisamos, pois de acordo com a nova Lei de Proteção de Dados (LGPD) algumas informações veiculares, por exemplo o VIN Number, precisam ser criptografados. Precisamos que desenvolva um método de criptografia para proteger os dados de nossos clientes.
